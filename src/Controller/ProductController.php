@@ -34,7 +34,7 @@ class ProductController extends AbstractController
      */
     public function show($slug): Response
     {
-        $product = $this->entityManager->getRepository(Product::class)->findOneBy($slug);
+        $product = $this->entityManager->getRepository(Product::class)->findOneBySlug($slug);
 
         /* ou
         $product = $this->entityManager->getRepository(Product::class)->findOneBy([
